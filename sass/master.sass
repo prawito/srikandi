@@ -1,0 +1,142 @@
+@import variable
+@import mixin
+
+*
+  font-family: arial
+  overflow-x: hidden
+
+body
+  margin: 0px
+  padding: 0px
+
+a
+  text-decoration: none !important
+.banner
+  background: $main-blue
+  height: 200px
+  display: flex
+  align-items: center
+.container
+  padding: 20px
+
+.title
+  font-weight: bolder
+.small
+  font-weight: normal
+  font-size: 1em
+
+.row
+  display: flex
+  flex-wrap: wrap
+
+.col-xl-1
+  +width-div(1)
+.col-xl-2
+  +width-div(2)
+.col-xl-3
+  +width-div(3)
+.col-xl-4
+  +width-div(4)
+.col-xl-5
+  +width-div(5)
+.col-xl-6
+  +width-div(6)
+.col-xl-7
+  +width-div(7)
+.col-xl-8
+  +width-div(8)
+.col-xl-9
+  +width-div(9)
+.col-xl-10
+  +width-div(10)
+.col-xl-11
+  +width-div(11)
+.col-xl-12
+  +width-div(12)
+
+.center-both
+  display: flex
+  justify-content: center
+  align-items: center
+
+.bg-blue
+  background: $main-blue
+.bg-green
+  background: $main-green
+.bg-orange
+  background: $main-orange
+.bg-red
+  background: $main-red
+.bg-light
+  background: $main-light
+.bg-dark
+  background: $main-dark
+
+.ft-blue
+  color: $main-blue
+.ft-green
+  color: $main-green
+.ft-orange
+  color: $main-orange
+.ft-red
+  color: $main-red
+.ft-light
+  color: $main-light
+.ft-dark
+  color: $main-dark
+.ft-white
+  color: white
+
+.box
+  width: 100px
+  height: 100px
+  margin: 0px 10px
+  @extend .center-both
+
+.border
+  box-sizing: border-box
+  border: solid 1px $main-dark
+
+.btn
+  font-weight: bold
+  text-transform: uppercase
+  padding: 8px 24px
+  margin: auto 3px
+  border: none
+  transition: all 0.3s ease
+  +btn-color($light-grey, $dark-grey-c)
+.btn-dark
+  +btn-color($dark-grey-c, white)
+.btn-green
+  +btn-color($main-green, white)
+.btn-orange
+  +btn-color($main-orange, white)
+.btn-blue
+  +btn-color($main-blue, white)
+.btn-red
+  +btn-color($main-red, white)
+.btn-xs
+  padding: 4px 12px
+  font-size: 10px
+.btn-sm
+  padding: 6px 18px
+  font-size: 12px
+.btn-lg
+  padding: 10px 30px
+  font-size: 18px
+.btn-block
+  width: 100%
+
+xmp
+  background: $light-grey
+  padding: 5px 10px
+  border-left: solid 6px $dark-grey-a
+
+.components
+  list-style: none
+  padding: 0px
+  li
+    padding: 5px
+    &:hover
+      cursor: pointer
+      color: lighten(black, 70)

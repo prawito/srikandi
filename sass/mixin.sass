@@ -1,0 +1,28 @@
+=btn-color($bg, $text)
+  background: $bg
+  color: $text
+  &:disabled
+    background: $bg
+    opacity: .6
+    cursor: not-allowed
+    &:hover
+      background: $bg
+      opacity: .6
+  &:hover
+    background: darken($bg, 8)
+    color: darken($text, 8)
+    transition: all 0.3s ease
+    cursor: pointer
+  &:active
+    outline: none
+    border: none
+    background: darken($bg, 10)
+    color: darken($text, 10)
+    transition: all 0.3s ease
+
+=width-div($size)
+  width: (100% / (12/$size))
+
+=media($size)
+  @media screen and (max-width: $size)
+    @content
